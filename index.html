@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: "Poppins", sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 77px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(126, 79, 170);
+            font-size: 0.9rem;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .first {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 80px 0;
+        }
+
+        .first>div {
+            width: 30%;
+
+        }
+
+        .leftSection {
+            font-size: 2rem;
+            /* margin: 30px 0; */
+        }
+
+        .leftSection .button{
+            padding: 56px 0;
+        }
+
+        /* .leftSection .btn{
+            padding: 12px;
+            background-color:  rgb(0, 0, 33);
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+        } */
+
+        .leftSection a{
+            padding: 12px;
+            background-color:  rgb(0, 0, 33);
+            color: rgb(144, 72, 212);
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .leftSection a:hover{
+            /* background-color: rgb(153, 121, 184); */
+            border: 2px solid;
+            cursor: pointer;
+        }
+
+        .rightSection img {
+            width: 80%;
+            /* margin: 50px 0; */
+
+        }
+
+        .purple {
+            color: rgb(144, 72, 212);
+        }
+
+        #element {
+            color: rgb(144, 72, 212);
+        }
+
+        hr {
+            border: 0;
+            height: 1.2px;
+            margin: 90px 44px;
+        }
+
+        .Aboutme {
+            max-width: 88vw;
+            margin: auto;
+        }
+
+        .Skills {
+            max-width: 88vw;
+            margin: auto;
+        }
+
+        .Experience {
+            max-width: 88vw;
+            margin: auto;
+        }
+
+        .Skills {
+            max-width: 68.75rem;
+            margin: auto;
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+
+        .Skills h2 {
+            color: rgb(144, 72, 212);
+        }
+
+        .skill-header {
+            margin-bottom: 0.9rem;
+        }
+
+        .skills-wrapper img {
+            padding: 1.25rem;
+        }
+
+        .icon {
+            width: 11.875rem;
+            height: 11.25rem;
+        }
+
+        .icon-card {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 11px;
+            box-shadow: 0 3px 10px var(--secondary-shadow);
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .Contact {
+            margin-top: 2rem;
+        }
+
+        .Contact h2 {
+            text-align: center;
+            margin-bottom: var(--bottom-margin-2);
+            color: rgb(162, 84, 235);
+        }
+
+        .contact-form-container {
+            max-width: 40.75rem;
+            margin: 0 auto;
+            padding: 0.938rem;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px var(--secondary-shadow);
+        }
+
+        .contact-form-container label {
+            line-height: 2.7em;
+            font-weight: var(--bold-font);
+            color: rgb(144, 72, 212);
+        }
+
+        .contact-form-container textarea {
+            min-height: 6.25rem;
+            font-size: 14px;
+        }
+
+        .contact-form-container .input-field {
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+            border: 2px outset var(--primary-color);
+            font-size: 0.875rem;
+            outline: none;
+        }
+
+        .input-field::placeholder {
+            padding: 0.5rem;
+            color: rgb(144, 72, 212);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: rgb(144, 72, 212);
+            border: 2px solid var(--primary-color);
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: var(--bold-font);
+            transition: var(--transition);
+        }
+
+        .submit-btn:hover {
+            background-color: rgb(153, 121, 184);
+            border: 2px solid;
+            cursor: pointer;
+        }
+
+        .socials {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            right: 1%;
+            bottom: 50%;
+        }
+
+        .socicon {
+            width: 1.2rem;
+            height: 1.2rem;
+            background-color:rgb(153, 121, 184);
+            border-radius: 11px;
+        }
+
+        footer {
+            background-color: var(--bg-color);
+            padding: 1.25rem;
+            text-align: center;
+            margin: 2rem 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About me">About me</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#Experience">Experience</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="first" id="Home">
+            <div class="leftSection">
+                Hi,My Name is <span class="purple">Sahithi</span>
+                <div>and I am a Passionate</div>
+                <span id="element"></span>
+                <div class="button">
+                   <!-- <a href="Cv.pdf"><button class="btn">Download Resume
+                    </button></a> -->
+                    <a href="Cv.pdf" className="btn" download>Download Resume</a>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="html2.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="Aboutme" id="About me">
+            <h1>Aboutme</h1>
+            <p>Hello World! I'm M.V Satya Surya Aditya Sahithi, a Full Stack Developer. From
+                civil engineering to lines the code on a web page, I love combining the worlds of logic and creative
+                design to make eye-catching, accessible, and user- friendly websites and applications.
+                Technology leads, society follows. The move towards increasing inclusivity and diversity in the industry
+                through representation is of importance to me.
+                I'm excited to make the leap and continue refining my skills with the right company.
+            </p>
+        </section>
+        <hr>
+        <section class="Skills" id="Skills">
+            <h2>SKILLS</h2>
+            <div class="skills-wrapper">
+                <div class="image1">
+                    <img src="java-logo-1.png" alt="" loading="lazy" class="icon icon-card">
+                    <img src="Spring boot Logo2.png" alt="" loading="lazy" class="icon icon-card">
+                    <img src="html l.png" alt="" loading="lazy" class="icon icon-card">
+                    <div class="image2">
+                        <img src="css3.png" alt="" loading="lazy" class="icon icon-card">
+                        <img src="js.webp" alt="" loading="lazy" class="icon icon-card">
+                        <img src="react.png" alt="" loading="lazy" class="icon icon-card">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="Experience" id="Experience">
+            <h1>Experience</h1>
+            <p>Developed scalable backend systems to support high-traffic websites
+                and applications, ensuring smooth operation during peak times.
+                Spearheaded the adoption of agile development methodologies,
+                improving project management efficiency and flexibility. I collaborate with cross-functional teams to
+                gather
+                requirements, analyze user needs, and implement effective solutions.
+                Additionally, Reviewed code, debugged problems, and corrected
+                issues.
+            </p>
+        </section>
+        <hr>
+        <section class="Contact" id="Contact">
+            <h2>Get In Touch With Me</h2>
+            <div class="contact-form-container">
+                <div class="contact-form">
+                    <form action="form">
+                        <div class="form-control">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="sender-name" placeholder="Enter Your Name"
+                                class="input-field" required />
+                        </div>
+                        <div class="form-control">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="sender-email" placeholder="Enter Your Email"
+                                class="input-field" required />
+                        </div>
+                        <div class="form-control">
+                            <label for="message">Message</label>
+                            <textarea id="message" cols="60" rows="10" placeholder="Enter Your Message" name="message"
+                                class="input-field" required></textarea>
+                        </div>
+                        <input type="submit" value="Submit" id="submit-btn" class="submit-btn" />
+                    </form>
+                </div>
+            </div>
+        </section>
+        <div class="socials">
+            <a href="#" target="_blank"><img src="link.png" alt="linkedin" loading="lazy" class="socicon" /></a>
+            <a href="#" target="_blank"><img src="na.png" alt="naukri.com" loading="lazy" class="socicon" /></a>
+            <a href="#" target="_blank"><img src="Github.png" alt="Github" class="socicon" /></a>
+    </main>
+    <footer>
+        <p class="copy">&copy; Copyright 2024</p>
+        <p class="copy">
+            <!-- Built with &#x2661; by -->
+            <!-- <a href="https://twitter.com/koladechris" target="_blank"
+            >Kolade Chris (Ksound)</a
+          > -->
+        </p>
+    </footer>
+    <!-- Setup and start animation! -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Full Stack Developer.',],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</body>
+
+</html>
